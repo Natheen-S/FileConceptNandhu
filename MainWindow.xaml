@@ -1,0 +1,56 @@
+﻿<Window x:Class="FileConcept.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileConcept"
+        mc:Ignorable="d"
+         Title="MainWindow" Height="330" Width="300"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStartupLocation="CenterScreen" WindowStyle="None"
+        MouseDown="Window_MouseDown" MouseDoubleClick="Window_MouseDoubleClick">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border CornerRadius="40" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="Violet" Offset="0.0" />
+                    <GradientStop Color="#FCDABE" Offset="0.9"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <StackPanel Grid.Row="0" Grid.RowSpan="2">
+            <StackPanel Margin="0,15,0,0">
+                <Image Source="https://img.icons8.com/external-ddara-lineal-ddara/512/external-registration-medical-ddara-lineal-ddara.png" Width="70" Opacity="0.5"></Image>
+                <Label Content="Login" HorizontalAlignment="Center" FontSize="20" FontWeight="DemiBold" FontFamily="helvetica" Opacity="0.5"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Username" Opacity="0.5" Margin="40,10,0,10" FontSize="12"/>
+                <TextBox x:Name="txtbox_username" Background="Transparent" Foreground="White" Width="130" Height="23" FontSize="15" Margin="10,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Password" Opacity="0.5" Margin="40,10,0,10"/>
+                <PasswordBox x:Name="passwordBox" Background="Transparent"  Foreground="White" Width="130" Height="23" FontSize="15" Margin="15,0,0,0" />
+                <TextBox x:Name="passwordTxtBox" Background="Transparent"  Foreground="White" Width="130" Height="23" FontSize="15" Margin="-130,0,0,0" Visibility="Collapsed"/>
+            </StackPanel>
+
+            <StackPanel>
+                <CheckBox x:Name="chkbox_pass" Content="Show Password" Opacity="0.5" HorizontalAlignment="Center" Margin="0,10,0,10" Checked="chkbox_pass_Checked" Unchecked="chkbox_pass_Unchecked"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Button x:Name="btnlogin_submit" Content="Submit" Background="Transparent" Width="60" BorderBrush="Lavender" Margin="0,10,0,0" Click="btnlogin_submit_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>
